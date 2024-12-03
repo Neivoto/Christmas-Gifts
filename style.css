@@ -1,0 +1,189 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+body {
+  box-sizing: border-box;
+}
+#container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url(./1382.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: cursive;
+  font-size: 120%;
+  color: white;
+}
+#header h1 {
+  margin-top: 4vh;
+}
+#tree {
+  width: 100%;
+}
+#tree img {
+  width: 100%;
+}
+#button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+#button button {
+  width: 40%;
+  padding: 2%;
+  font-family: cursive;
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  background: linear-gradient(135deg, #09bc33, #fb0000);
+  color: white;
+  cursor: pointer;
+}
+#video {
+  width: 100%;
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+#video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#loader {
+  display: flex;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+  flex-direction: column;
+  padding-top: 10vh;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background-color: white;
+}
+#santa {
+  background: url(./santa.png);
+  width: 100%;
+  height: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+#santa h1 {
+  font-family: cursive;
+  font-size: 2.3vh;
+  margin-top: 14vh;
+  margin-left: 35vw;
+}
+#ending-page{
+    width: 100%;
+    height: 100%;
+    background:url(/62259.jpg);
+    position: absolute;
+    z-index: -1;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    
+
+}
+#ending-page h2{
+    font-size: 3vh;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #container {
+    height: 100vh; /* Adjust container height */
+  }
+  #santa{
+    width: auto;
+  }
+
+  #header h1 {
+    margin-top: 2vh;
+    font-size: 2rem; /* Larger font size for tablets */
+  }
+
+  #button button {
+    width: 30%;
+    padding: 1.5%; /* Adjust button size for tablets */
+  }
+
+  #santa h1 {
+    font-size: 2.5vh; /* Adjust Santa text size */
+    margin-left: 20vw;
+  }
+}
+
+/* Responsive styles for PC screens */
+@media (min-width: 1025px) {
+  #container {
+    height: 110vh; /* Adjust container height */
+  }
+  #loader{
+    height: 110vh;
+  }
+  #tree{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 79%;
+  }
+  #tree img{
+    width: 40%;
+  }
+
+  #header h1 {
+    margin-top: 2vh;
+    font-size: 2.5rem; /* Larger font size for PCs */
+  }
+
+  #button button {
+    width: 20%;
+    padding: 1%; /* Smaller padding for PC */
+  }
+
+  #santa h1 {
+    font-size: 3vh; /* Larger Santa text size for PC */
+    margin-left: 8vw;
+  }
+  #santa{
+    width: auto;
+  }
+  #video video{
+    height: 100%;
+    width: 50%;
+  }
+}
